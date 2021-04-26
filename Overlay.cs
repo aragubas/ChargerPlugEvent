@@ -25,6 +25,7 @@ using System.Media;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ChargerPlugEvent
@@ -46,6 +47,7 @@ namespace ChargerPlugEvent
         public int DetectionDelay = 500;
         public int BatteryFullLevel = 97;
         public int BorderWidth = 1;
+        public float AnimationSpeed = 0.2f;
         public int FontSize = 18;
         public string ChargerPlugText = "Charging";
         public string ChargerUnplugText = "Unplugged";
@@ -97,10 +99,8 @@ namespace ChargerPlugEvent
         {
             Opacity -= 0.1;
 
-
             if (Opacity <= 0)
             {
-                Opacity = 0;
                 Visible = false;
                 FadeOut.Stop();
             }
@@ -128,15 +128,27 @@ namespace ChargerPlugEvent
 
         public void LoadSounds()
         {
-            PlugInSound = new SoundPlayer();
-            PlugInSound.SoundLocation = Environment.CurrentDirectory + "\\plug.wav";
-            Console.WriteLine("Plug sound loaded");
-
-            if (OutSound)
+            try
             {
-                UnplugSound = new SoundPlayer();
-                UnplugSound.SoundLocation = Environment.CurrentDirectory + "\\unplug.wav";
-                Console.WriteLine("Unplug sound loaded");
+                PlugInSound = new SoundPlayer();
+                PlugInSound.SoundLocation = Environment.CurrentDirectory + "\\plug.wav";
+                PlugInSound.Load();
+                Console.WriteLine("Plug sound loaded");
+
+                if (OutSound)
+                {
+                    UnplugSound = new SoundPlayer();
+                    UnplugSound.SoundLocation = Environment.CurrentDirectory + "\\unplug.wav";
+                    UnplugSound.Load();
+                    Console.WriteLine("Unplug sound loaded");
+                }
+
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Sound Files not found\n\nArquivos de som não encontrado\n\nArchivo de sonido no encontrado\n\nサウンドファイルが見つかりません\n\n找不到聲音文件", "ChargerPlugEvent");
+                Application.ExitThread();
+                
             }
 
         }
@@ -191,7 +203,6 @@ namespace ChargerPlugEvent
 
             if (Opacity >= 1)
             {
-                Opacity = 1;
                 WaitUntilFadeOut.Start();
                 FadeIn.Stop();
             }
@@ -252,6 +263,8 @@ namespace ChargerPlugEvent
         {
             FadeIn.Stop();
             WaitUntilFadeOut.Stop();
+
+            if (FadeOut.Enabled) { return; }
             if (!FadeoutWhenClicking)
             {
                 Opacity = 0;
