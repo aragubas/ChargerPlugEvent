@@ -1,0 +1,9 @@
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Release\ChargerPlugEvent.exe.config
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Release\plug.wav
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Release\properties.txt
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Release\unplug.wav
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Release\ChargerPlugEvent.exe
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Release\ChargerPlugEvent.Overlay.resources
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Release\ChargerPlugEvent.csproj.GenerateResource.Cache
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Release\ChargerPlugEvent.exe
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Release\Readme.txt

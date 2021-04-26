@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+   Copyright 2020 Aragubas/Paulo Otávio de Lima
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +25,7 @@ using System.Media;
 using System.Threading;
 using System.IO;
 using System.Drawing;
+using System.Reflection;
 
 namespace ChargerPlugEvent
 {
@@ -21,8 +38,22 @@ namespace ChargerPlugEvent
         static int DetectionDelay = 500;
         static Overlay OverlayWindow;
 
+        static DateTime BuildDate = new DateTime(2000, 1, 1);
+
+        /// <summary>
+        /// Get Version with Build Number
+        /// </summary>
+        /// <returns></returns>
+        public static string GetVersionWithBuild()
+        {
+            var version = Assembly.GetExecutingAssembly().GetName().Version.Major + "." + Assembly.GetExecutingAssembly().GetName().Version.Minor + "." + Assembly.GetExecutingAssembly().GetName().Version.Revision;
+
+            return version.ToString();
+        }
+
         static void Main(string[] args)
         {
+            Console.WriteLine("Charger Plug Event v" + GetVersionWithBuild());
             OverlayWindow = new Overlay(); 
 
             if (File.Exists(Environment.CurrentDirectory + "\\properties.txt"))
@@ -264,7 +295,6 @@ namespace ChargerPlugEvent
             OverlayWindow.LoadSounds();
             OverlayWindow.Update.Interval = DetectionDelay;
 
-            Console.WriteLine("Charger plug event started");
             Application.Run(OverlayWindow);
 
             
