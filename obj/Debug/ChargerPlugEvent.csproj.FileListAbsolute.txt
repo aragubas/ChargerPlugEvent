@@ -1,0 +1,11 @@
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\ChargerPlugEvent.exe.config
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\ChargerPlugEvent.exe
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\ChargerPlugEvent.pdb
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Debug\ChargerPlugEvent.csprojResolveAssemblyReference.cache
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Debug\ChargerPlugEvent.exe
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Debug\ChargerPlugEvent.pdb
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Debug\ChargerPlugEvent.Overlay.resources
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Debug\ChargerPlugEvent.csproj.GenerateResource.Cache
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\plug.wav
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\properties.txt
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\unplug.wav

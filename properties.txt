@@ -1,0 +1,82 @@
+﻿# Please open this file using a Monospaced font.
+#
+#                             `'.---__,,,,,!ufz2c}xr~,.`                             
+#                      `'-_,",_------,:!!"_-,c#####@@@@#Q9f]~.`                      
+#                  `._:"_---">vujWR&QBBBBBBBQ##@@@@@@@@@@@@@@#8W)-`                  
+#               '_:,_-----*9QQBBBBBBBBBBBBB###@@@@@@@@@@@@@@@@@@@@gz^.               
+#            ',:,----------*RQQBBBBBBBBBBB####@@@@@@@@@@@@@@@@@@@@@@@#W*'            
+#         `-",----------_!r1EQQBBBBBBBBBBB####@@@@@@@@@@@@@@@@@@@@@@@@@@Qy:`         
+#       `_:_----------_28QQQQQBBBBBBBBBBBB#####@@@@@@@@@@@@@@@@@@@@@@@@@@@#H!`       
+#      -!,---------,,-,qQQQQQQBBBBBBBBBBBB#####@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#z,      
+#    `:"---!lc])if5&j_,WQQQQQQBBBBBBBBBBBB#####@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q/`    
+#   .:-----cx--:28QQ&IRQQQQQQQBBBBBBBBBBBBB####@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#y.   
+#  -:------u2iI&88QQQQQQQQQQQQBBBBBBBBBBBB######@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@I-  
+# .:-------l888888QQQQQQQQQQQQBBBBBBBBBBBB#######@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@k. 
+#`:_-------cg88888QQQQQQQQQQQQBBBBBBBBBBBB########@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#|`
+#-:--------:388888QQQQQQQQQQQQBBBQQ8g&EDRRDB#######@@@@###@@@@@@@@@@@@@@@@@@@@@@@@@5-
+#!:-----!|!-rg8888QQQQQQgg88g&&&0R999999999g&QB8&g##@@#@@@@##@@@@@@@@@@@@@@@@@@@@@@Q=
+#!,-----cgg9D88888QQQQQQ8&EDRRD99999999DRRERRD99EB#####@@@@@@@#@@@@@@@@@@@@@@@@@@@@#/
+#!,-----x&gR|*1d88QQQQQQQQQQ&g&90E0DDD9RRRR0D9R&########@@@@@@@@#@@@@@@@@@@@@@@@@@@#)
+#::-----_*y&gRsf&88QQQQQQQQQQBQQ&RRRRRR9999RRD9Dg8B######@@@@@@##@@@@@##@@@@@@@@@@@Q=
+#-!-----:lEEIx*v*ig8QQQQQQQQQQBQg&R9999999D0999999&########@@@@@@#@@##@@@@@@@@@@@@@A-
+#`!,----lg3:--_^2&88QQQQQQQQQQBB8EE9RD99999EQ9999RQ#######@@@@@@@@@##@@@@@@@@@@@@@#r`
+# .!_---,x35zHE888QQQQQQQQQQQQBBBQB8&D9D999gB8&998#############@@@@@@@@@@@@@@@@@@@c. 
+#  -!------,^]2R88QQQ8au]us&QQBBBBBQgg8g&E&8&0gB################@@@@@@@@@@@@@@@@@z-  
+#   .!_--------:K8QQE)-----,\RQBBBBBBBBBBBB8&gQ####################@@@@@@@@@@@@#c.   
+#    `::--------~EQ&xxifx,---:5BBBBBBBBBBBB###########################@@@@@@@@8|`    
+#      -!,-------}Q88b_/ddr---}QBBBBBBBBBB############################@@@@@@#2,      
+#       `_:,-----cQQQ82x|uEi-_fBBBBBBBBBBB############################@@@@#f!`       
+#         `-:,---lQQQQQQQQ&z}2QBBBBBBBBBBB##############################Qc"`         
+#            `,:,!j&QQQQQQA5QQQ8&QBBBBBBBB###########################Qa*'            
+#               '_::::vDQ5:-__"_*8BBBBBBBB########################&2^.               
+#                  `._:!)1kj2jjycNQBBBBBBB####################&sr-`                  
+#                      `'-,"::,,_:~]AQBBBBB############QEWyv!'`                      
+#                             `'.--_:]yjfsHaHfzkl}xr=,.`                             
+# 2021 - Aragubas
+#
+####################################
+# ChargerPlugEvent Properties File #
+# Avalaible Properties:
+#
+# 'delay:'             - The time in miliseconds the overlay will stay on screen
+# 'unplug-event'       - Enable the overlay when unplugging
+# 'PlugText:'          - Text that will apper when plugging charger
+# 'show-battery-level' - Show Battery Percentage on Overlay
+# 'show-battery-full'  - Show battery full message on Overlay
+# 'BatteryFullText'    - Text that will apper when battery is full (only works if 'show-battery-full' is set)
+# 'text-color'         - R, G, B value of Text Color on Overlay
+# 'background-color'   - R, G, B value of Overlay Background Color
+# 'border-color'       - R, G, B value of Border Color
+# 'text-font'          - Font Name of Text that will be used
+# 'border-width'       - Thickness of border in pixels
+# 'fadeout-on-click'   - Fadeout Overlay when clicking, otherwise just close it
+# 'font-size:'         - Font Size of the Text
+#
+# If ChargerPlugEvent is already running, you will need to open/close it to change settings
+# The settings are only loaded in startup.
+#
+# 2021 - Aragubas
+# If you enjoy the software please give it a Star and tell your friends about it!
+# Thank you!
+
+# -- Integer Values
+delay:1000
+border-width:1
+font-size:20
+
+# -- String Values
+PlugText:Charging
+text-font:Segoe UI
+ 
+# -- Flags
+show-battery-level
+show-battery-full
+unplug-event
+fadeout-on-click
+
+BatteryFullText:Fully Charged
+# -- Color Settings
+text-color:230, 231, 240
+background-color:32, 32, 42
+border-color:2, 2, 5
+
