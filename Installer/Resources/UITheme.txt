@@ -1,0 +1,115 @@
+#############################
+# Theme file for TabNotepad
+# Dark Theme
+# Theme data works like:
+# <key>;A,R,G,B
+# Alpha transparency can maybe be supported
+
+# = Forms
+Form_BackgroundColor;255, 42, 42, 58
+Form_ForegroundColor;255, 240, 240, 230
+Form_CloseButton_BackgroundColor; 255, 235, 120, 120
+Form_CloseButton_ForegroundColor; 255, 220, 220, 230
+Form_CloseButton_MouseDownColor; 255, 200, 100, 100
+Form_MaximizeButton_BackgroundColor; 255, 100, 100, 100
+Form_MaximizeButton_ForegroundColor; 255, 230, 230, 230
+Form_MaximizeButton_MouseDownColor; 255, 50, 50, 50
+Form_MinimizeButton_BackgroundColor; 255, 50, 50, 50
+Form_MinimizeButton_ForegroundColor; 255, 240, 240, 240
+Form_MinimizeButton_MouseDownColor; 255, 20, 20, 20
+Form_BorderColor; 255, 220, 230, 255
+
+
+# = Button
+Button_BackgroundColor; 255, 96, 96, 115
+Button_ForegroundColor; 255, 210, 210, 210
+Button_MouseDownColor; 255, 120, 120, 120
+Button_MouseOverColor; 255, 96, 96, 100
+
+
+# = ListView
+ListView_BackgroundColor; 255, 64, 64, 96
+ListView_ForegroundColor; 255, 230, 230, 248
+ListView_Header_BackgroundColor; 255, 48, 48, 54
+ListView_Header_ForegroundColor; 255, 240, 240, 255
+ListView_Header_SpliterColor; 255, 72, 72, 72, 102
+ListView_SelectedItemBackgroundColor; 150, 32, 32, 48
+
+# = ListBox
+ListBox_BackgroundColor; 255, 64, 64, 96
+ListBox_ForegroundColor; 255, 230, 230, 225
+
+# = TabControl
+# Selected
+TabControl_HeaderSelected_BackgroundColor; 255, 32, 32, 38
+TabControl_PersistentHeaderSelected_BackgroundColor; 255, 38, 38, 48
+TabControl_HeaderSelected_ForegroundColor; 255, 220, 220, 228
+TabControl_PersistentHeaderSelected_ForegroundColor; 255, 200, 200, 228
+# Unselected
+TabControl_HeaderUnselected_BackgroundColor; 255, 14, 14, 24
+TabControl_PersistentHeaderUnselected_BackgroundColor; 255, 28, 28, 38
+TabControl_HeaderUnselected_ForegroundColor; 255, 120, 128, 138
+TabControl_PersistentHeaderUnselected_ForegroundColor; 255, 134, 134, 147
+# TabSeparator
+TabControl_SeparatorLineColor; 255, 96, 96, 120
+
+# = SidePanel
+SidePanel_BackgroundColor; 255, 42, 42, 58
+SidePanel_ForegroundColor; 255, 195, 200, 190
+
+# = ToolStrip
+# Button
+ToolStrip_Button_BackgroundColor; 0, 0, 0, 0
+ToolStrip_Button_ForegroundColor; 255, 200, 200, 200
+# MenuItem
+ToolStrip_MenuItem_BackgroundColor; 255, 200, 200, 215
+ToolStrip_MenuItem_ForegroundColor; 255, 4, 4, 4
+# ToolStrip itself
+ToolStrip_BackgroundColor; 255, 64, 64, 78
+ToolStrip_ForegroundColor; 255, 200, 200, 190
+# DropDown
+ToolStrip_DropDownButton_BackgroundColor; 0, 0, 0, 0
+ToolStrip_DropDownButton_ForegroundColor; 255, 200, 200, 190
+# StatusStrip
+ToolStrip_StatusStrip_BackgroundColor; 255, 32, 32, 48
+ToolStrip_StatusStrip_ForegroundColor; 255, 210, 210, 190
+ 
+# = ExtraFunctionalityPanel
+ExtraFuncPanel_BackgroundColor; 255, 64, 64, 78
+ExtraFuncPanel_ForegroundColor; 255, 210, 210, 190
+
+# = TextBox
+TextEditor_BackgroundColor; 255, 64, 64, 84
+TextEditor_ForegroundColor; 255, 200, 200, 200
+
+# = RichTextBox
+RichTextBox_BackgroundColor; 255, 64, 64, 78
+RichTextBox_ForegroundColor; 255, 200, 200, 200
+
+# = Checkbox
+Checkbox_BackgroundColor; 0, 0, 0, 0
+Checkbox_ForegroundColor; 255, 200, 200, 200
+
+# = FlowLayoutPanel
+FlowLayoutPanel_BackgroundColor; 255, 64, 64, 78
+FlowLayoutPanel_ForegroundColor; 255, 200, 200, 200
+
+# = TextBox
+TextBox_BackgroundColor; 255, 32, 32, 48
+TextBox_ForegroundColor; 255, 200, 200, 180
+
+# = ComboBox
+ComboBox_BackgroundColor; 255, 96, 96, 115
+ComboBox_ForegroundColor; 255, 200, 200, 200
+
+# = RadioButton
+RadioButton_BackgroundColor; 0, 0, 0, 0
+RadioButton_ForegroundColor; 255, 200, 200, 200
+
+# = Split Container
+SplitContainer_BackgroundColor; 255, 38, 38, 49
+SplitContainer_ForegroundColor; 255, 240, 240, 240
+
+# = Table Layout
+TableLayout_BackgroundColor; 255, 35, 35, 40
+TableLayout_ForegroundColor; 255, 240, 240, 240
