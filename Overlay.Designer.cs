@@ -77,7 +77,7 @@ namespace ChargerPlugEvent
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(256, 85);
+            this.ClientSize = new System.Drawing.Size(250, 75);
             this.Font = new System.Drawing.Font("Arial", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Overlay";
@@ -88,7 +88,6 @@ namespace ChargerPlugEvent
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Overlay_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Overlay_Paint);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Overlay_MouseDown);
             this.ResumeLayout(false);
 
         }
@@ -97,7 +96,7 @@ namespace ChargerPlugEvent
 
         public System.Windows.Forms.Timer FadeOut;
         public System.Windows.Forms.Timer Update;
-        private System.Windows.Forms.Timer FadeIn;
-        private System.Windows.Forms.Timer WaitUntilFadeOut;
+        public System.Windows.Forms.Timer FadeIn;
+        public System.Windows.Forms.Timer WaitUntilFadeOut;
     }
 }

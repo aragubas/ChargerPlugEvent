@@ -65,16 +65,54 @@ namespace ChargerPlugEvent
                     // Ignore Comment Line
                     if (ceira.StartsWith("#")) { continue; }
                     
+
                     //Unplug Event Property
                     if (ceira.ToString() == "unplug-event")
                     {
                         OutSound = true;
                     }
 
-                    //Unplug Event Property
-                    if (ceira.ToString() == "fadeout-on-click")
+
+                    // Window Size Property
+                    if (ceira.ToString().Contains("overlay-size:"))
                     {
-                        OverlayWindow.FadeoutWhenClicking = true;
+                        string[] SinasSplit = ceira.ToString().Split(':')[1].ToString().Split('x');
+
+                        OverlayWindow.Size = new Size(Convert.ToInt32(SinasSplit[0]), Convert.ToInt32(SinasSplit[1]));
+                        Console.WriteLine("Overlay size has been set to: (" + OverlayWindow.Size.Width + "," + OverlayWindow.Size.Height + ")");
+                    }
+
+
+                    // Animation Speed Property
+                    if (ceira.ToString().Contains("animation-speed:"))
+                    {
+                        string[] CeiraSplit = ceira.ToString().Split(':');
+
+                        OverlayWindow.AnimationSpeed = float.Parse(CeiraSplit[1]);
+                        Console.WriteLine("Animation Speed has been set to: " + OverlayWindow.AnimationSpeed);
+                    }
+
+
+                    // Animation Update Interval Property
+                    if (ceira.ToString().Contains("animation-update-interval:"))
+                    {
+                        string[] CeiraSplit = ceira.ToString().Split(':');
+
+                        OverlayWindow.FadeOut.Interval = Convert.ToInt32(CeiraSplit[1]);
+                        OverlayWindow.FadeIn.Interval = Convert.ToInt32(CeiraSplit[1]);
+
+                        Console.WriteLine("Animation Update Interval has been set to: " + OverlayWindow.AnimationSpeed);
+                    }
+
+
+                    // Animation Update Interval Property
+                    if (ceira.ToString().Contains("stay-interval:"))
+                    {
+                        string[] CeiraSplit = ceira.ToString().Split(':');
+
+                        OverlayWindow.WaitUntilFadeOut.Interval = Convert.ToInt32(CeiraSplit[1]);
+
+                        Console.WriteLine("Stay Interval has been set to: " + OverlayWindow.WaitUntilFadeOut.Interval);
                     }
 
 
@@ -90,12 +128,12 @@ namespace ChargerPlugEvent
                         OverlayWindow.ShowBatteryFull = true;
                     }
 
-                    // Update Delay Property
-                    if (ceira.ToString().Contains("delay:"))
+                    // Update Interval Property
+                    if (ceira.ToString().Contains("update-interval:"))
                     {
                         string[] CeiraSplit = ceira.ToString().Split(':');
-                        DetectionDelay = Convert.ToInt32(CeiraSplit[1]);
-                        Console.WriteLine("Detection Delay has been set to: " + DetectionDelay);
+                        OverlayWindow.Update.Interval = Convert.ToInt32(CeiraSplit[1]);
+                        Console.WriteLine("Detection Delay has been set to: " + OverlayWindow.Update.Interval);
                     }
 
                     // Font Size Property
@@ -124,6 +162,7 @@ namespace ChargerPlugEvent
                         Console.WriteLine("Batery Full Level has been set to: " + OverlayWindow.BatteryFullLevel);
 
                     }
+
 
                     // Background Color Property
                     if (ceira.ToString().Contains("background-color:"))
@@ -165,6 +204,7 @@ namespace ChargerPlugEvent
                         OverlayWindow.BackgroundColor = Sinas;
                         Console.WriteLine("Background color has been set to R:" + R + ",G:" + G + ",B:" + B);
                     }
+
 
                     // Border Color Property
                     if (ceira.ToString().Contains("border-color:"))
@@ -247,6 +287,7 @@ namespace ChargerPlugEvent
                         Console.WriteLine("Text color has been set to R:" + R + ",G:" + G + ",B:" + B);
                     }
 
+
                     // Plug Text Property
                     if (ceira.ToString().Contains("PlugText:"))
                     {
@@ -256,6 +297,7 @@ namespace ChargerPlugEvent
 
                     }
 
+
                     // Unplug Text Property
                     if (ceira.ToString().Contains("UnplugText:"))
                     {
@@ -264,6 +306,7 @@ namespace ChargerPlugEvent
                         Console.WriteLine("Unplug Text has been set to: " + OverlayWindow.ChargerUnplugText);
 
                     }
+
 
                     // Text Font Property
                     if (ceira.ToString().Contains("text-font:"))

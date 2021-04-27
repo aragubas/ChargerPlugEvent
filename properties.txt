@@ -1,21 +1,24 @@
 ﻿# Please open this file using a Monospaced font.
 ##################################################
-# ChargerPlugEvent Properties File #
+# ChargerPlugEvent Properties File
 # Avalaible Properties:
 #
-# 'delay:'             - The time in miliseconds the overlay will stay on screen
-# 'unplug-event'       - Enable the overlay when unplugging
-# 'PlugText:'          - Text that will apper when plugging charger
-# 'show-battery-level' - Show Battery Percentage on Overlay
-# 'show-battery-full'  - Show battery full message on Overlay
-# 'BatteryFullText'    - Text that will apper when battery is full (only works if 'show-battery-full' is set)
-# 'text-color'         - R, G, B value of Text Color on Overlay
-# 'background-color'   - R, G, B value of Overlay Background Color
-# 'border-color'       - R, G, B value of Border Color
-# 'text-font'          - Font Name of Text that will be used
-# 'border-width'       - Thickness of border in pixels
-# 'fadeout-on-click'   - Fadeout Overlay when clicking, otherwise just close it
-# 'font-size:'         - Font Size of the Text
+# 'update-interval:'          - Every X miliseconds the application will check for state change
+# 'stay-interval:'            - The time in miliseconds the overlay will stay on screen
+# 'unplug-event'              - Enable the overlay when unplugging
+# 'PlugText:'                 - Text that will apper when plugging charger
+# 'show-battery-level'        - Show Battery Percentage on Overlay
+# 'show-battery-full'         - Show battery full message on Overlay
+# 'BatteryFullText'           - Text that will apper when battery is full (only works if 'show-battery-full' is set)
+# 'text-color'                - R, G, B value of Text Color on Overlay
+# 'background-color'          - R, G, B value of Overlay Background Color
+# 'border-color'              - R, G, B value of Border Color
+# 'text-font'                 - Font Name of Text that will be used
+# 'border-width'              - Thickness of border in pixels
+# 'font-size:'                - Font Size of the Text
+# 'overlay-size'              - Size of overlay window
+# 'animation-speed'           - Speed of animation
+# 'animation-update-interval' - Update Interval of fade animation in miliseconds
 #
 # If ChargerPlugEvent is already running, you will need to open/close it to change settings
 # The settings are only loaded in startup.
@@ -25,9 +28,15 @@
 # Thank you!
 
 # -- Integer Values
-delay:1000
+update-interval:1000
+stay-interval:2200
 border-width:1
-font-size:20
+font-size:18
+overlay-size:250x75
+animation-update-interval:25
+
+# -- Float Values
+animation-speed:0.15
 
 # -- String Values
 PlugText:Charging
@@ -38,10 +47,9 @@ text-font:Segoe UI
 show-battery-level
 show-battery-full
 unplug-event
-#fadeout-on-click
 
 # -- Color Settings
 text-color:230, 231, 240
-background-color:32, 32, 42
+background-color:64, 64, 68
 border-color:2, 2, 5
 

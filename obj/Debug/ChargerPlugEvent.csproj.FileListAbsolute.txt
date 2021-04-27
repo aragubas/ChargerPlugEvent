@@ -9,3 +9,4 @@ C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Debug\ChargerPlugEvent.
 C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\plug.wav
 C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\properties.txt
 C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\Readme.txt
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Debug\unplug.wav

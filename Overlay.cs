@@ -42,9 +42,7 @@ namespace ChargerPlugEvent
         public bool ShowBatteryPercentage;
         public bool ShowBatteryPercentageWhenFull;
         public bool ShowBatteryFull;
-        public bool FadeoutWhenClicking = false;
         public bool OutSound;
-        public int DetectionDelay = 500;
         public int BatteryFullLevel = 97;
         public int BorderWidth = 1;
         public float AnimationSpeed = 0.2f;
@@ -59,10 +57,6 @@ namespace ChargerPlugEvent
         string DisplayText = "";
 
         // Make the Window Click-Trough-able
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern int GetWindowLong(IntPtr hWnd, int nIndex);
-        [DllImport("user32.dll")]
-        static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
         const int GWL_EXSTYLE = -20;
         const int WS_EX_LAYERED = 0x80000;
         const int WS_EX_TRANSPARENT = 0x20;
@@ -70,12 +64,12 @@ namespace ChargerPlugEvent
 
 
         public Overlay()
-        {
-            var style = GetWindowLong(this.Handle, GWL_EXSTYLE);
-            SetWindowLong(this.Handle, GWL_EXSTYLE, style | WS_EX_LAYERED | WS_EX_TRANSPARENT);
-
-            
+        {            
             InitializeComponent();
+
+            // Enable Double Buffer
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
+            this.UpdateStyles();
 
             
         }
@@ -87,7 +81,7 @@ namespace ChargerPlugEvent
             {
                 var createParams = base.CreateParams;
 
-                createParams.ExStyle |= WS_EX_NOACTIVATE;
+                createParams.ExStyle |= WS_EX_NOACTIVATE | WS_EX_TRANSPARENT | WS_EX_LAYERED;
                 createParams.Style = 0x20;
 
                 return createParams;
@@ -108,6 +102,14 @@ namespace ChargerPlugEvent
 
         public void ShowOverlay()
         {
+            if (Opacity > 0)
+            {
+                Refresh();
+                Opacity = 0.8;
+                FadeIn.Stop();
+                FadeOut.Stop();
+                WaitUntilFadeOut.Start();
+            }
             TopMost = false;
             CenterToScreen();
             Visible = true;
@@ -147,8 +149,7 @@ namespace ChargerPlugEvent
             catch (FileNotFoundException)
             {
                 MessageBox.Show("Sound Files not found\n\nArquivos de som não encontrado\n\nArchivo de sonido no encontrado\n\nサウンドファイルが見つかりません\n\n找不到聲音文件", "ChargerPlugEvent");
-                Application.ExitThread();
-                
+                Environment.Exit(0);
             }
 
         }
@@ -201,11 +202,12 @@ namespace ChargerPlugEvent
         {
             Opacity += 0.2;
 
-            if (Opacity >= 1)
+            if (Opacity >= 0.8)
             {
                 WaitUntilFadeOut.Start();
                 FadeIn.Stop();
             }
+
         }
 
         private void Overlay_Paint(object sender, PaintEventArgs e)
@@ -216,31 +218,37 @@ namespace ChargerPlugEvent
             string TextToDisplay = DisplayText;
             
             // Aways show percentage when unplugging
-            if (TextToDisplay == ChargerUnplugText)
+            if (ShowBatteryPercentage)
             {
-                PowerStatus p = SystemInformation.PowerStatus;
-                int BatteryLevel = (int)(p.BatteryLifePercent * 100);
-
-                TextToDisplay += " " + BatteryLevel + "%";
-
-            }
-            else // Show Percentage when plugging Or Show battery full
-            {
-                if (ShowBatteryPercentage || ShowBatteryFull)
+                if (TextToDisplay == ChargerUnplugText)
                 {
                     PowerStatus p = SystemInformation.PowerStatus;
                     int BatteryLevel = (int)(p.BatteryLifePercent * 100);
 
-                    // Replace text with Battery Full Text (if enabled)
-                    if (ShowBatteryFull && BatteryLevel >= BatteryFullLevel)
-                    {
-                        TextToDisplay = BatteryFullText;
-                    }
+                    TextToDisplay += " " + BatteryLevel + "%";
 
-                    // Add battery percentage to text
-                    if (ShowBatteryPercentage && !ShowBatteryFull)
+                }
+                else // Show Percentage when plugging Or Show battery full
+                {
+                    if (ShowBatteryFull)
                     {
-                        TextToDisplay += " " + BatteryLevel + "%";
+                        PowerStatus p = SystemInformation.PowerStatus;
+                        int BatteryLevel = (int)(p.BatteryLifePercent * 100);
+                        bool BatteryIsIndedFull = BatteryLevel >= BatteryFullLevel;
+
+                        // Replace text with Battery Full Text (if enabled)
+                        if (ShowBatteryFull && BatteryLevel >= BatteryFullLevel)
+                        {
+                            TextToDisplay = BatteryFullText;
+                        }
+
+
+                        // Add battery percentage to text
+                        if (ShowBatteryPercentage && !ShowBatteryFull || ShowBatteryFull && !BatteryIsIndedFull)
+                        {
+                            TextToDisplay += " " + BatteryLevel + "%";
+
+                        }
 
                     }
 
@@ -257,28 +265,6 @@ namespace ChargerPlugEvent
 
             // Draw Text
             e.Graphics.DrawString(TextToDisplay, new Font(TextFont, FontSize), new SolidBrush(TextColor), new Rectangle(0, 0, Width, Height), ceira);
-        }
-
-        private void Overlay_MouseDown(object sender, MouseEventArgs e)
-        {
-            FadeIn.Stop();
-            WaitUntilFadeOut.Stop();
-
-            if (FadeOut.Enabled) { return; }
-            if (!FadeoutWhenClicking)
-            {
-                Opacity = 0;
-                FadeOut.Stop();
-                Visible = false;
-
-            }
-            else
-            {
-                Opacity = 1;
-                Visible = true;
-                FadeOut.Start();
-            }
-
         }
 
 
