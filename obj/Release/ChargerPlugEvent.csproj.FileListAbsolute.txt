@@ -8,3 +8,4 @@ C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Release\ChargerPlugEven
 C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Release\ChargerPlugEvent.exe
 C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Release\Readme.txt
 C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\obj\Release\ChargerPlugEvent.csprojResolveAssemblyReference.cache
+C:\Users\Bazinga\Documents\Projects\ChargerPlugEvent\bin\Release\lang.txt

@@ -1,0 +1,6 @@
+#
+# Arquivo de Idioma para o ChargerPlugEvent
+#
+PlugText:Carregando
+UnplugText:Desconectado
+BatteryFullText:Carregado

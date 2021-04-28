@@ -1,0 +1,6 @@
+﻿#
+# -- Default Language File for ChargerPlugEvent
+# This file has been created outside ChargerPlugEvent Installer.
+PlugText:Charging
+UnplugText:Unplugged
+BatteryFullText:Fully Charged

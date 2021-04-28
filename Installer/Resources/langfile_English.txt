@@ -1,0 +1,6 @@
+#
+# English LangFile for ChargerPlugEvent
+#
+PlugText:Charging
+UnplugText:Unplugged
+BatteryFullText:Fully charged

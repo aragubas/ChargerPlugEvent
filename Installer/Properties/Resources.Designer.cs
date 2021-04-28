@@ -61,12 +61,125 @@ namespace Installer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #!VERSION=1.0
+        ///name=ChargerPlugEvent
+        ///subname=ARAGUBAS-TAIYOU-CHARGER_PLUG_EVENT
+        ///version=1.1
+        ///by=Aragubas.
+        /// </summary>
+        internal static string ChargerPlugEvent {
+            get {
+                return ResourceManager.GetString("ChargerPlugEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap ChargerPlugEventLogo {
             get {
                 object obj = ResourceManager.GetObject("ChargerPlugEventLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # Language file for ChargerPlugEvent Installer
+        ///# -- File linked inside the installer executable
+        ///LanguageLink;English.txt
+        ///
+        ///# -- Window
+        ///WindowTitle;ChargerPlugEvent Installer
+        ///
+        ///# -- Load LangFile Screen
+        ///LoadLangFile_LoadingLabel;Loading language file...
+        ///
+        ///# -- Main Screen
+        ///MainPage_TitleLabel;Instalation -&gt; Set Up
+        ///MainPage_InstallingTitle;Instalation -&gt; Installing
+        ///
+        ///# -- About Install
+        ///AboutInstall_Title;Instalation -&gt; Set Up -&gt; About ChargerPlugEvent
+        ///
+        ///# -- Instalation Complete
+        ///InstalationComplet [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string English {
+            get {
+                return ResourceManager.GetString("English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] InstalationPackpage {
+            get {
+                object obj = ResourceManager.GetObject("InstalationPackpage", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #
+        ///# English LangFile for ChargerPlugEvent
+        ///#
+        ///PlugText:Charging
+        ///UnplugText:Unplugged
+        ///BatteryFullText:Fully charged.
+        /// </summary>
+        internal static string langfile_English {
+            get {
+                return ResourceManager.GetString("langfile_English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #
+        ///# Arquivo de Idioma para o ChargerPlugEvent
+        ///#
+        ///PlugText:Carregando
+        ///UnplugText:Desconectado
+        ///BatteryFullText:Carregado.
+        /// </summary>
+        internal static string langfile_Portuguese {
+            get {
+                return ResourceManager.GetString("langfile_Portuguese", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ChargerPlugEvent.exe.
+        /// </summary>
+        internal static string PathToExecutable {
+            get {
+                return ResourceManager.GetString("PathToExecutable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # Arquivo de linguagem para ChargerPlugEvent
+        ///# -- Arquivo de Idioma linkado no executavel
+        ///LanguageLink;Portuguese.txt
+        ///
+        ///# -- Janela
+        ///WindowTitle;Instalador do ChargerPlugEvent
+        ///
+        ///# -- Tela de Carregamento do Idioma
+        ///LoadLangFile_LoadingLabel;Carregando Arquivo de Idioma...
+        ///
+        ///# -- Tela Principal
+        ///MainPage_TitleLabel;Instalação -&gt; Configurar
+        ///MainPage_InstallingTitle;Instalação -&gt; Instalando
+        ///
+        ///# -- Sobre Instalação
+        ///AboutInstall_Title;Instalação -&gt; Configurar -&gt; Sobre ChargerPlugEvent
+        ///
+        ///# -- Instalação  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Portugues {
+            get {
+                return ResourceManager.GetString("Portugues", resourceCulture);
             }
         }
         

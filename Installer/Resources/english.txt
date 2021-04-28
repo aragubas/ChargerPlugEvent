@@ -1,0 +1,40 @@
+# Language file for ChargerPlugEvent Installer
+# -- File linked inside the installer executable
+LanguageLink;English.txt
+
+# -- Window
+WindowTitle;ChargerPlugEvent Installer
+
+# -- Load LangFile Screen
+LoadLangFile_LoadingLabel;Loading language file...
+
+# -- Main Screen
+MainPage_TitleLabel;Instalation -> Set Up
+MainPage_InstallingTitle;Instalation -> Installing
+
+# -- About Install
+AboutInstall_Title;Instalation -> Set Up -> About ChargerPlugEvent
+
+# -- Instalation Complete
+InstalationComplete_Title;Instalation -> Installing -> Instalation Complete
+InstalationComplete_DescriptionText;Instalation Finished!%n%nif you find any errors fell free to write a issue at ChargerPlugEvent github page!
+InstalationComplete_FinishButton;Finish
+
+# -- Install Status
+InstallStatus_SetUpInstallPath;Setting up instalation path
+InstallStatus_InstalationFinished;Instalation Finished!
+InstallStatus_RegisterInstalation;Register instalation
+InstallStatus_UnpackpInstallerPackpage;Unpacking Installer Packpage
+InstallStatus_SetCorrectLanguage;Set language
+InstallStatus_SetAsAutoRun;Run at startup
+InstallStatus_FileAlreadyExists;File already exists
+
+# -- Slide 00
+Slide00_Title;Click button next to continue!
+
+# -- Slide 001
+Slide01_Title;ChargerPlugEvent (CPE)
+Slide01_Text;ChargerPlugEvent is a simple yet usefull app for showing when you plug or unplug your laptop charger.%nWindows dont have any handling of this event (can't even set a sound) so i made my own way of handling that.%n%nChargerPlugEvent runs at background waiting for when you plug or unplug your laptop charger.%nDon't worry about peformace. i tested it on a Intel Celeron N3060 and it uses about 0% of CPU!!%nthe Intel Celeron N3060 is a Dual Core 1.5Ghz processor with a TDP of 5Watz!%n%nChargerPlugEvent is also Open Source, take a look at code or modify it at github page!
+
+# -- Generic
+NextButton;Next

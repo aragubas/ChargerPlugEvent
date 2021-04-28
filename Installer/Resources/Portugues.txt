@@ -1,0 +1,41 @@
+# Arquivo de linguagem para ChargerPlugEvent
+# -- Arquivo de Idioma linkado no executavel
+LanguageLink;Portuguese.txt
+
+# -- Janela
+WindowTitle;Instalador do ChargerPlugEvent
+
+# -- Tela de Carregamento do Idioma
+LoadLangFile_LoadingLabel;Carregando Arquivo de Idioma...
+
+# -- Tela Principal
+MainPage_TitleLabel;Instalação -> Configurar
+MainPage_InstallingTitle;Instalação -> Instalando
+
+# -- Sobre Instalação
+AboutInstall_Title;Instalação -> Configurar -> Sobre ChargerPlugEvent
+
+# -- Instalação Completa
+InstalationComplete_Title;Instalação -> Instalando -> Instalação Completa
+InstalationComplete_DescriptionText;Instalação Completa!%n%nSe você encontrou algum erro sinta-se livre para criar uma issue na pagina do github!
+InstalationComplete_FinishButton;Concluir
+
+# -- Status da Instalação
+InstallStatus_SetUpInstallPath;Criar directorio de instalação
+InstallStatus_InstalationFinished;Instalação concluida!
+InstallStatus_RegisterInstalation;Registrar instalação
+InstallStatus_UnpackpInstallerPackpage;Extrair pacote de instalação
+InstallStatus_SetCorrectLanguage;Definir idioma
+InstallStatus_SetAsAutoRun;Iniciar na inicialização
+InstallStatus_FileAlreadyExists;Arquivo já existe
+
+# -- Slide 00
+Slide00_Title;Click no botão 'Proximo' para continuar!
+
+# -- Slide 01
+Slide01_Title;ChargerPlugEvent (CPE)
+Slide01_Text;ChargerPlugEvent é um programa simples porem util que mostra quando você pluga ou despluga o carregador do seu laptop.%nWindows não te da nenhuma opção para fazer algo neste evento (não é possivel nem colocar um som!)%n%nChargerPlugEvent roda em background esperando anciosamente para quando você plugar ou desplugar seu carregador.%nNão se preocupe sobre perda de peformace, em um Intel Celeron N3060 o ChargerPlugEvent usa 0% de CPU!%no Intel Celeron N3060 é um processador de 1.5Ghz com TDP de 5Watz!%n%nChargerPlugEvent tambem é Open Source, você pode dar uma olhada no código ou modificalo pela pagina do github!
+
+
+# -- Generico
+NextButton;Proximo

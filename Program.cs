@@ -56,6 +56,7 @@ namespace ChargerPlugEvent
             Console.WriteLine("Charger Plug Event v" + GetVersionWithBuild());
             OverlayWindow = new Overlay(); 
 
+            // Load Properties File
             if (File.Exists(Environment.CurrentDirectory + "\\properties.txt"))
             {
                 string[] FileLines = File.ReadAllLines(Environment.CurrentDirectory + "\\properties.txt");
@@ -288,6 +289,28 @@ namespace ChargerPlugEvent
                     }
 
 
+                    // Text Font Property
+                    if (ceira.ToString().Contains("text-font:"))
+                    {
+                        string[] CeiraSplit = ceira.ToString().Split(':');
+                        OverlayWindow.TextFont = CeiraSplit[1];
+                        Console.WriteLine("Text Font has been set to: " + OverlayWindow.TextFont);
+
+                    }
+
+                }
+
+                
+            }
+
+            if (File.Exists(Environment.CurrentDirectory + "\\lang.txt"))
+            {
+                string[] FileLines = File.ReadAllLines(Environment.CurrentDirectory + "\\lang.txt");
+
+                foreach (string ceira in FileLines)
+                {
+                    if (ceira.StartsWith("#")) { continue; }
+
                     // Plug Text Property
                     if (ceira.ToString().Contains("PlugText:"))
                     {
@@ -296,7 +319,6 @@ namespace ChargerPlugEvent
                         Console.WriteLine("Plug Text has been set to: " + OverlayWindow.ChargerPlugText);
 
                     }
-
 
                     // Unplug Text Property
                     if (ceira.ToString().Contains("UnplugText:"))
@@ -307,30 +329,23 @@ namespace ChargerPlugEvent
 
                     }
 
-
-                    // Text Font Property
-                    if (ceira.ToString().Contains("text-font:"))
-                    {
-                        string[] CeiraSplit = ceira.ToString().Split(':');
-                        OverlayWindow.TextFont = CeiraSplit[1];
-                        Console.WriteLine("Text Font has been set to: " + OverlayWindow.TextFont);
-
-                    }
-
-
                     // Battery Full Text Property
                     if (ceira.ToString().Contains("BatteryFullText:"))
                     {
                         string[] CeiraSplit = ceira.ToString().Split(':');
                         OverlayWindow.BatteryFullText = CeiraSplit[1];
-                        Console.WriteLine("Battery Full Text has been set to: " + OverlayWindow.ChargerUnplugText);
+                        Console.WriteLine("Battery Full Text has been set to: " + OverlayWindow.BatteryFullText);
 
                     }
 
 
                 }
 
-                
+            }
+            else
+            {
+                MessageBox.Show("Cannot find language file.\n\nNão foi possivel encontrar o arquivo de linguagem\n\nNo se puede encontrar el archivo de idioma.\n\n言語ファイルが見つかりません。\n\n找不到语言文件。", "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(0);
             }
 
             // Set some properties

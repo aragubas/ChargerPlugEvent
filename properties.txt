@@ -6,10 +6,8 @@
 # 'update-interval:'          - Every X miliseconds the application will check for state change
 # 'stay-interval:'            - The time in miliseconds the overlay will stay on screen
 # 'unplug-event'              - Enable the overlay when unplugging
-# 'PlugText:'                 - Text that will apper when plugging charger
 # 'show-battery-level'        - Show Battery Percentage on Overlay
 # 'show-battery-full'         - Show battery full message on Overlay
-# 'BatteryFullText'           - Text that will apper when battery is full (only works if 'show-battery-full' is set)
 # 'text-color'                - R, G, B value of Text Color on Overlay
 # 'background-color'          - R, G, B value of Overlay Background Color
 # 'border-color'              - R, G, B value of Border Color
@@ -39,8 +37,6 @@ animation-update-interval:25
 animation-speed:0.15
 
 # -- String Values
-PlugText:Charging
-BatteryFullText:Fully Charged
 text-font:Segoe UI
  
 # -- Flags

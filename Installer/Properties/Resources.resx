@@ -118,10 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ChargerPlugEvent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChargerPlugEvent.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="ChargerPlugEventLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChargerPlugEvent Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="English" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\english.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="langfile_English" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\langfile_english.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="langfile_Portuguese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\langfile_Portuguese.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Portugues" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Portugues.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="UITheme" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UITheme.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="InstalationPackpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\instalationpackpage.zip;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PathToExecutable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PathToExecutable.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>

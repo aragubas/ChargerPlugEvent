@@ -11,6 +11,7 @@
     <AssemblyName>Installer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,11 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>ChargerPlugEvent-Icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\app-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,18 +50,69 @@
     <Reference Include="TaiyouUI">
       <HintPath>..\..\TaiyouUILibrary\Bin\TaiyouUI.dll</HintPath>
     </Reference>
+    <Reference Include="TaiyouUtils">
+      <HintPath>..\..\TaiyouUtils\TaiyouUtils\Bin\TaiyouUtils.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutInstall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AboutInstall.Designer.cs">
+      <DependentUpon>AboutInstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstalationComplete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstalationComplete.Designer.cs">
+      <DependentUpon>InstalationComplete.cs</DependentUpon>
+    </Compile>
     <Compile Include="InstallerPage1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="InstallerPage1.Designer.cs">
       <DependentUpon>InstallerPage1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LanguageSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LanguageSelection.Designer.cs">
+      <DependentUpon>LanguageSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageSelection_LoadingCenterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LanguageSelection_LoadingCenterPanel.Designer.cs">
+      <DependentUpon>LanguageSelection_LoadingCenterPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slides\00.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Slides\00.Designer.cs">
+      <DependentUpon>00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slides\01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Slides\01.Designer.cs">
+      <DependentUpon>01.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutInstall.resx">
+      <DependentUpon>AboutInstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstalationComplete.resx">
+      <DependentUpon>InstalationComplete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InstallerPage1.resx">
       <DependentUpon>InstallerPage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageSelection.resx">
+      <DependentUpon>LanguageSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageSelection_LoadingCenterPanel.resx">
+      <DependentUpon>LanguageSelection_LoadingCenterPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,6 +124,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Slides\00.resx">
+      <DependentUpon>00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slides\01.resx">
+      <DependentUpon>01.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,7 +144,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ChargerPlugEvent-Icon.ico" />
+    <Content Include="Resources\app-icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\PathToExecutable.txt" />
+    <None Include="Resources\langfile_Portuguese.txt" />
+    <None Include="Resources\ChargerPlugEvent.txt" />
+    <None Include="Resources\InstalationPackpage.zip" />
+    <None Include="Resources\langfile_English.txt" />
+    <None Include="Resources\Portugues.txt" />
+    <None Include="Resources\english.txt" />
     <None Include="Resources\UITheme.txt" />
     <None Include="Resources\ChargerPlugEvent Logo.png" />
   </ItemGroup>
