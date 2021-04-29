@@ -10,3 +10,5 @@
 
 **DISCLAIMER** : Plug/Unplug sound is from Microsoft Windows and are under copyright protection of microsoft.
 You can locate these sounds at `C:\Windows\Media` folder
+
+We now have a [Discord Server!](https://discord.gg/mCG3NHsPpx)
