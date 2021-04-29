@@ -3,7 +3,7 @@
 LanguageLink;Portuguese.txt
 
 # -- Janela
-WindowTitle;Instalador do ChargerPlugEvent
+WindowTitle;Instalador do ChargerPlugEvent Revisão 2
 
 # -- Tela de Carregamento do Idioma
 LoadLangFile_LoadingLabel;Carregando Arquivo de Idioma...
@@ -30,7 +30,7 @@ InstallStatus_SetAsAutoRun;Iniciar na inicialização
 InstallStatus_FileAlreadyExists;Arquivo já existe
 
 # -- Slide 00
-Slide00_Title;Click no botão 'Proximo' para continuar!
+Slide00_Title;Click no botão 'Proximo' para continuar!%n%nRevisão 2
 
 # -- Slide 01
 Slide01_Title;ChargerPlugEvent (CPE)

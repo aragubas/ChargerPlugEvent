@@ -39,7 +39,7 @@ namespace Installer
             RootForm.FormCloseButton.Click += FormCloseButton_Click;
             RootForm.Size = OriginalSize;
             RootForm.ResizeableForm = false;
-            RootForm.Icon = new Icon("Resources/app-icon.ico");
+            RootForm.Icon = Properties.Resources.app_icon;
 
             Dock = DockStyle.Fill;
             
@@ -72,7 +72,7 @@ namespace Installer
         }
 
         void FormCloseButton_Click(object sender, EventArgs e)
-        {
+        { 
             Environment.Exit(0);
         }
 
@@ -207,7 +207,9 @@ namespace Installer
 
         private void RegisterTaiyouInstalation()
         {
-            File.WriteAllText(TaiyouSoftwareInstalationRegistryPath + "ChargerPlugEvent", Properties.Resources.ChargerPlugEvent); 
+            // Write Install Info File
+            File.WriteAllText(TaiyouSoftwareInstalationRegistryPath + "ChargerPlugEvent", Properties.Resources.ChargerPlugEvent);
+
 
         }
 

@@ -26,6 +26,7 @@ using System.Threading;
 using System.IO;
 using System.Drawing;
 using System.Reflection;
+using Microsoft.Win32;
 
 namespace ChargerPlugEvent
 {
@@ -36,6 +37,7 @@ namespace ChargerPlugEvent
         static bool InSound = true;
         static bool OutSound;
         static int DetectionDelay = 500;
+        public static string InstallPath;
         static Overlay OverlayWindow;
 
         static DateTime BuildDate = new DateTime(2000, 1, 1);
@@ -56,10 +58,15 @@ namespace ChargerPlugEvent
             Console.WriteLine("Charger Plug Event v" + GetVersionWithBuild());
             OverlayWindow = new Overlay(); 
 
+            // Set Path to current executable path
+            InstallPath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
+
+            Console.WriteLine("Current path is: " + InstallPath);
+
             // Load Properties File
-            if (File.Exists(Environment.CurrentDirectory + "\\properties.txt"))
+            if (File.Exists(InstallPath + "\\properties.txt"))
             {
-                string[] FileLines = File.ReadAllLines(Environment.CurrentDirectory + "\\properties.txt");
+                string[] FileLines = File.ReadAllLines(InstallPath + "\\properties.txt");
 
                 foreach (string ceira in FileLines)
                 {
@@ -303,9 +310,9 @@ namespace ChargerPlugEvent
                 
             }
 
-            if (File.Exists(Environment.CurrentDirectory + "\\lang.txt"))
+            if (File.Exists(InstallPath + "\\lang.txt"))
             {
-                string[] FileLines = File.ReadAllLines(Environment.CurrentDirectory + "\\lang.txt");
+                string[] FileLines = File.ReadAllLines(InstallPath + "\\lang.txt");
 
                 foreach (string ceira in FileLines)
                 {

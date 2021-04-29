@@ -133,14 +133,14 @@ namespace ChargerPlugEvent
             try
             {
                 PlugInSound = new SoundPlayer();
-                PlugInSound.SoundLocation = Environment.CurrentDirectory + "\\plug.wav";
+                PlugInSound.SoundLocation = Program.InstallPath + "\\plug.wav";
                 PlugInSound.Load();
                 Console.WriteLine("Plug sound loaded");
 
                 if (OutSound)
                 {
                     UnplugSound = new SoundPlayer();
-                    UnplugSound.SoundLocation = Environment.CurrentDirectory + "\\unplug.wav";
+                    UnplugSound.SoundLocation = Program.InstallPath + "\\unplug.wav";
                     UnplugSound.Load();
                     Console.WriteLine("Unplug sound loaded");
                 }

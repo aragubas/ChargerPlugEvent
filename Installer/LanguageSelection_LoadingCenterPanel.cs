@@ -18,7 +18,7 @@ namespace Installer
 
         public delegate void dLangFileLoaded();
         public event dLangFileLoaded LanguageFileLoaded;
-
+        
         public LanguageSelection_LoadingCenterPanel()
         {
             InitializeComponent();

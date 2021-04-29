@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TaiyouUI;
 using TaiyouUtils;
 using System.Diagnostics;
+using System.IO;
 
 namespace Installer
 {
@@ -40,12 +41,11 @@ namespace Installer
 
         private void FinishButton_Click(object sender, EventArgs e)
         {
-            // Start Newly Installed app
-            var Sinas = new ProcessStartInfo();
-            Sinas.WorkingDirectory = RootPage.ChargerPlugEventInstallPath;
-            Sinas.FileName = RootPage.PathToChargerPlugEventExecutable;
-
-            Process.Start(Sinas);
+            // Delete the temporary directory
+            Directory.Delete(Program.TempDirToWorkWith, true);
+            
+            // Start newly installed program
+            Process.Start(RootPage.PathToChargerPlugEventExecutable);
 
             Environment.Exit(0);
         }

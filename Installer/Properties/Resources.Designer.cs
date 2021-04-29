@@ -61,6 +61,16 @@ namespace Installer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon app_icon {
+            get {
+                object obj = ResourceManager.GetObject("app_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to #!VERSION=1.0
         ///name=ChargerPlugEvent
         ///subname=ARAGUBAS-TAIYOU-CHARGER_PLUG_EVENT
@@ -89,7 +99,7 @@ namespace Installer.Properties {
         ///LanguageLink;English.txt
         ///
         ///# -- Window
-        ///WindowTitle;ChargerPlugEvent Installer
+        ///WindowTitle;ChargerPlugEvent Installer Revision 2
         ///
         ///# -- Load LangFile Screen
         ///LoadLangFile_LoadingLabel;Loading language file...
@@ -102,7 +112,7 @@ namespace Installer.Properties {
         ///AboutInstall_Title;Instalation -&gt; Set Up -&gt; About ChargerPlugEvent
         ///
         ///# -- Instalation Complete
-        ///InstalationComplet [rest of string was truncated]&quot;;.
+        ///Instala [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string English {
             get {
@@ -163,7 +173,7 @@ namespace Installer.Properties {
         ///LanguageLink;Portuguese.txt
         ///
         ///# -- Janela
-        ///WindowTitle;Instalador do ChargerPlugEvent
+        ///WindowTitle;Instalador do ChargerPlugEvent Revisão 2
         ///
         ///# -- Tela de Carregamento do Idioma
         ///LoadLangFile_LoadingLabel;Carregando Arquivo de Idioma...
@@ -175,7 +185,7 @@ namespace Installer.Properties {
         ///# -- Sobre Instalação
         ///AboutInstall_Title;Instalação -&gt; Configurar -&gt; Sobre ChargerPlugEvent
         ///
-        ///# -- Instalação  [rest of string was truncated]&quot;;.
+        ///# -- I [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Portugues {
             get {

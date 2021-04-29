@@ -3,7 +3,7 @@
 LanguageLink;English.txt
 
 # -- Window
-WindowTitle;ChargerPlugEvent Installer
+WindowTitle;ChargerPlugEvent Installer Revision 2
 
 # -- Load LangFile Screen
 LoadLangFile_LoadingLabel;Loading language file...
@@ -30,7 +30,7 @@ InstallStatus_SetAsAutoRun;Run at startup
 InstallStatus_FileAlreadyExists;File already exists
 
 # -- Slide 00
-Slide00_Title;Click button next to continue!
+Slide00_Title;Click button next to continue!%n%nRevision 2
 
 # -- Slide 001
 Slide01_Title;ChargerPlugEvent (CPE)

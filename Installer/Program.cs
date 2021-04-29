@@ -6,12 +6,29 @@ using System.Windows.Forms;
 using System.IO;
 using TaiyouUI;
 using TaiyouUtils;
+using System.Reflection;
+using System.Globalization;
 
 namespace Installer
 {
     static class Program
     {
+        // Public Variable
         public static string TempDirToWorkWith;
+
+        /// <summary>
+        /// Get Version with Build Number
+        /// </summary>
+        /// <returns></returns>
+        public static string GetVersionWithBuild()
+        {
+            DateTime BuildDate = new DateTime(2000, 1, 1);
+            var version = Assembly.GetExecutingAssembly().GetName().Version.Major + "." + Assembly.GetExecutingAssembly().GetName().Version.Minor + "." + Assembly.GetExecutingAssembly().GetName().Version.Revision;
+
+            return version.ToString();
+        }
+
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -20,7 +37,7 @@ namespace Installer
         {
             // Set Temp Dir
             TempDirToWorkWith = Path.GetTempPath() + "\\TaiyouChargerPlugEventInstaller\\";
-
+            Console.WriteLine("TNotepad Installer installer");
             // Create temporary directory
             Directory.CreateDirectory(TempDirToWorkWith);
             Directory.CreateDirectory(TempDirToWorkWith + "Languages");
@@ -37,7 +54,6 @@ namespace Installer
             File.WriteAllText(TempDirToWorkWith + "LanguagesReplace\\English.txt", Properties.Resources.langfile_English);
             File.WriteAllText(TempDirToWorkWith + "LanguagesReplace\\Portuguese.txt", Properties.Resources.langfile_Portuguese);
 
-
             // Load UI Theme
             TaiyouUI.ThemeLoader.LoadDictData(TempDirToWorkWith + "UITheme.txt");
 
@@ -49,7 +65,7 @@ namespace Installer
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Create Main Window
-            TaiyouUI.Utils.CreateWindow(new InstallerPage1(), "Installer");
+            TaiyouUI.Utils.CreateWindow(new InstallerPage1(), "ChargerPlugEvent Installer rev2");
 
             Application.Run();
         }
