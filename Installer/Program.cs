@@ -37,7 +37,7 @@ namespace Installer
         {
             // Set Temp Dir
             TempDirToWorkWith = Path.GetTempPath() + "\\TaiyouChargerPlugEventInstaller\\";
-            Console.WriteLine("TNotepad Installer installer");
+            Console.WriteLine("ChargerPlugEvent installer v" + GetVersionWithBuild());
             // Create temporary directory
             Directory.CreateDirectory(TempDirToWorkWith);
             Directory.CreateDirectory(TempDirToWorkWith + "Languages");
